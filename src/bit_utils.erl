@@ -34,9 +34,9 @@ bits_set(Integer, Length) ->
 set_bits(BitList, Length) ->
     set_bits(BitList, Length, 0).
 
--spec lowest_bit_set(N :: non_neg_integer()) -> LowestBitSet :: non_neg_integer().
+-spec lowest_bit_set(N :: non_neg_integer()) -> LowestBitSet :: non_neg_integer() | undefined.
 lowest_bit_set(0) ->
-    0;
+    undefined;
 lowest_bit_set(N) ->
     lowest_bit_set(N, 1).
 
@@ -79,7 +79,7 @@ set_bits([Bit | RestOfBitList], Length, Integer) ->
 -spec lowest_bit_set(N :: non_neg_integer(), Pos :: non_neg_integer()) -> LowestBitSet :: non_neg_integer().
 lowest_bit_set(N, Pos) ->
     if N rem 2 =:= 1 ->
-        Pos;
+        Pos - 1;
     true ->
         lowest_bit_set(N bsr 1, Pos + 1)
     end.

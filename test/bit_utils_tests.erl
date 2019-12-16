@@ -28,11 +28,12 @@ bytes_to_bits_test() ->
     ?assertEqual(1024,Res2).
 
 lowest_bit_set_test() ->
-    ?assertEqual(0, bit_utils:lowest_bit_set(0)),
-    ?assertEqual(1, bit_utils:lowest_bit_set(1)),
-    ?assertEqual(1, bit_utils:lowest_bit_set(3)),
-    ?assertEqual(4, bit_utils:lowest_bit_set(8)),
-    ?assertEqual(1, bit_utils:lowest_bit_set(9)).
+    ?assertEqual(undefined, bit_utils:lowest_bit_set(0)),
+    ?assertEqual(0, bit_utils:lowest_bit_set(1)),
+    ?assertEqual(0, bit_utils:lowest_bit_set(3)),
+    ?assertEqual(1, bit_utils:lowest_bit_set(6)),
+    ?assertEqual(3, bit_utils:lowest_bit_set(8)),
+    ?assertEqual(0, bit_utils:lowest_bit_set(9)).
 
 bits_set_test() ->
     Len1 = 0,
