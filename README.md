@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/relayr/erl-bit-utils.svg?branch=master)](https://travis-ci.org/relayr/erl-bit-utils) [![Coverage Status](https://coveralls.io/repos/github/relayr/erl-bit-utils/badge.svg?branch=master)](https://coveralls.io/github/relayr/erl-bit-utils?branch=master)
 
-Erlang functions operating on bits.
+Erlang functions operating on bits. Indexes of bits in byte numbers start at position 0.
 
 ## Examples
 
@@ -25,9 +25,14 @@ Return indexes of set bits in integer of given size.
 ```
 
 #### lowest_bit_set/1
-Return index of lowest bit set.
+Return index of lowest bit set (or atom `undefined` if none is set).
 ```
-TODO:
+1> bit_utils:lowest_bit_set(5).
+0
+2> bit_utils:lowest_bit_set(4).
+2
+3> bit_utils:lowest_bit_set(0).
+undefined
 ```
 
 #### bytes_to_bits/1, bits_to_bytes/1
