@@ -1,6 +1,6 @@
 {application,bit_utils,
              [{description,"Erlang bit functions"},
-              {vsn, "1.0.4"},
+              {vsn, "1.0.5"},
               {licenses,["MIT"]},
               {links,[{"GitHub","https://github.com/relayr/erl-bit-utils"}]},
               {applications,[kernel,stdlib]}]}.
