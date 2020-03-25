@@ -1,6 +1,6 @@
 # bit_utils
 
-[![Build Status](https://travis-ci.org/relayr/erl-bit-utils.svg?branch=master)](https://travis-ci.org/relayr/erl-bit-utils) [![Coverage Status](https://coveralls.io/repos/github/relayr/erl-bit-utils/badge.svg?branch=master)](https://coveralls.io/github/relayr/erl-bit-utils?branch=master)
+[![Build Status](https://img.shields.io/github/workflow/status/relayr/erl-bit-utils/Erlang%20CI)](https://github.com/relayr/erl-bit-utils/actions?query=workflow%3A%22Erlang+CI%22) [![Hex.pm](https://img.shields.io/hexpm/v/bit_utils.svg?style=flat)](https://hex.pm/packages/bit_utils) [![Coverage Status](https://coveralls.io/repos/github/relayr/erl-bit-utils/badge.svg?branch=master)](https://coveralls.io/github/relayr/erl-bit-utils?branch=master)
 
 Erlang functions operating on bits. Indexes of bits in byte numbers start at position 0.
 
